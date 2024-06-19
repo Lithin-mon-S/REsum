@@ -19,6 +19,7 @@ class Experience(models.Model):
     job_title = models.CharField(max_length=100)
     company_name = models.CharField(max_length=100)
     description = models.TextField()
+    start_date = models.DateField()
 
     def __str__(self):
         return self.job_title
@@ -29,6 +30,7 @@ class Education(models.Model):
     institution_name = models.CharField(max_length=100)
     degree = models.CharField(max_length=100)
     field_of_study = models.CharField(max_length=100)
+    start_date = models.DateField()
 
     def __str__(self):
         return self.degree
@@ -39,6 +41,7 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     link = models.URLField(null=True, blank=True)
+    image = models.ImageField(upload_to='assets')
 
     def __str__(self):
         return self.title

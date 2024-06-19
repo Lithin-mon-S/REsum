@@ -65,136 +65,93 @@
         </ul>
       </div>
     </nav>
-
     <div class="container-fluid p-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0">Lithin Mon
-            <span class="text-primary">S</span>
-          </h1>
-          <div class="subheading mb-5">Alp,KERALA·
-            <a href="mailto:name@email.com">lithins@email.com</a>
-          </div>
-          <p class="mb-5">jest the beginning ..................</p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+          <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      {% for detail in personal_details %}
+      <div class="my-auto">
+        <h1 class="mb-0">{{ detail.name }}
+          <span class="text-primary">{{ detail.initial }}</span>
+        </h1>
+        <div class="subheading mb-5">{{ detail.address }} ·
+          <a href="mailto:{{ detail.email }}">{{ detail.email }}</a> · {{ detail.phone }}
         </div>
-      </section>
+        <p class="mb-5"></p>
+        <ul class="list-inline list-social-icons mb-0">
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      {% endfor %}
+    </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-          <h2 class="mb-5">Experience</h2>
 
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <h2 class="mb-5">Experience</h2>
+        {% for experience in experi %}
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Developer</h3>
-              <div class="subheading mb-3">inmakes</div>
-              <p>Bring to the table win-win survival strategies to ensure proactive domination.</p>
+              <h3 class="mb-0">{{ experience.job_title }}</h3>
+              <div class="subheading mb-3">{{ experience.company_name }}</div>
+              <p>{{ experience.description }}</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">JUNE 2024 - Present</span>
             </div>
           </div>
-
-<!--          <div class="resume-item d-flex flex-column flex-md-row mb-5">-->
-<!--            <div class="resume-content mr-auto">-->
-<!--              <h3 class="mb-0">Web Developer</h3>-->
-<!--              <div class="subheading mb-3">Intelitec Solutions</div>-->
-<!--              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>-->
-<!--            </div>-->
-<!--            <div class="resume-date text-md-right">-->
-<!--              <span class="text-primary">December 2011 - March 2013</span>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="resume-item d-flex flex-column flex-md-row mb-5">-->
-<!--            <div class="resume-content mr-auto">-->
-<!--              <h3 class="mb-0">Junior Web Designer</h3>-->
-<!--              <div class="subheading mb-3">Shout! Media Productions</div>-->
-<!--              <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>-->
-<!--            </div>-->
-<!--            <div class="resume-date text-md-right">-->
-<!--              <span class="text-primary">July 2010 - December 2011</span>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          <div class="resume-item d-flex flex-column flex-md-row">-->
-<!--            <div class="resume-content mr-auto">-->
-<!--              <h3 class="mb-0">Web Design Intern</h3>-->
-<!--              <div class="subheading mb-3">Shout! Media Productions</div>-->
-<!--              <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>-->
-<!--            </div>-->
-<!--            <div class="resume-date text-md-right">-->
-<!--              <span class="text-primary">September 2008 - June 2010</span>-->
-<!--            </div>-->
-<!--          </div>-->
-
-        </div>
-
-      </section>
+        {% endfor %}
+      </div>
+    </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
+      <div class="my-auto">
+        <h2 class="mb-5">Education</h2>
+        {% for education in Edu %}
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">AKNU</h3>
-              <div class="subheading mb-3">Bachelor of Forensic Science</div>
-              <div>investigation science</div>
-              <p>GPA: 3.23</p>
+              <h3 class="mb-0">{{ education.institution_name }}</h3>
+              <div class="subheading mb-3">{{ education.degree }}</div>
+              <div>{{ education.field_of_study }}</div>
+              <!-- You can add GPA or any other details here -->
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">August 2018 - May 2021</span>
+              <!-- Replace with actual date fields from the model if available -->
             </div>
           </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">RedTeam School</h3>
-              <div class="subheading mb-3">diploma in cyber security </div>
-              <p>GPA: 3.56</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2022 - May 2023</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
+        {% endfor %}
+      </div>
+    </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
@@ -304,24 +261,26 @@
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-        <div class="my-auto">
-          <h2 class="mb-5">My-Project</h2>
-          <p>For study purpose.</p>
-          <p class="mb-0">working pro.</p>
-           <a href="https://www.youtube.com/">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'assets/img/profile.jpg' %}" alt="">
-          </a>
-        </div>
-        <div class="my-auto">
-          <h2 class="mb-5">2nd-Project</h2>
-          <p>For study purpose.</p>
-          <p class="mb-0">working pro.</p>
-           <a href="https://www.youtube.com/">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'assets/img/profile.jpg' %}" alt="">
-          </a>
-        </div>
-
-      </section>
+      <div class="my-auto">
+        <h2 class="mb-5">Projects</h2>
+        {% for project in proj %}
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+              {% if project.link %}
+              <a href="{{ project.link }}">Visit Project</a>
+              {% endif %}
+            </div>
+            <div>
+              <a href="{{ project.link }}">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ project.image.url }}" alt="">
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
     </div>
 
